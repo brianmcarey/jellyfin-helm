@@ -5,6 +5,7 @@ This is a helm chart for [jellyfin](https://github.com/jellyfin/jellyfin/)
 ## TL;DR;
 
 ```shell
+$ git clone https://github.com/brianmcarey/jellyfin-helm.git
 $ helm install ./jellyfin-helm
 ```
 
