@@ -1,6 +1,6 @@
 # Jellyfin Software Media System
 
-This is a helm chart for [jellyfin](https://github.com/jellyfin/jellyfin/)
+This is a helm chart for [Jellyfin](https://github.com/jellyfin/jellyfin/)
 
 ## TL;DR;
 
