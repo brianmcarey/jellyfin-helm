@@ -105,3 +105,13 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+extraVolumes: []
+  #- name: renderD129
+  #  hostPath:
+  #    path: /dev/dri/renderD129
+
+extraVolumeMounts: []
+  #- mountPath: /dev/dri/renderD129
+  #  name: renderD129
+

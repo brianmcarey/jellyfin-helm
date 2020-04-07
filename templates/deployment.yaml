@@ -48,6 +48,9 @@ spec:
               mountPath: {{ .mountPath }}
               readOnly: {{ .readOnly }}
             {{- end }}
+            {{- if .Values.extraVolumeMounts }}
+            {{- toYaml .Values.extraVolumeMounts | nindent 12 }}
+            {{- end }}
           resources:
 {{ toYaml .Values.resources | indent 12 }}
       volumes:
@@ -69,6 +72,9 @@ spec:
       - name: {{ .name }}
         persistentVolumeClaim:
           claimName: {{ .existingClaim }}
+      {{- end }}
+      {{- if .Values.extraVolumes }}
+      {{- toYaml .Values.extraVolumes | nindent 6 }}
       {{- end }}
     {{- with .Values.nodeSelector }}
       nodeSelector:
