@@ -42,6 +42,7 @@ The following tables lists the configurable parameters of the Sentry chart and t
 | `image.repository`         | Image repository | `jellyfin/jellyfin` |
 | `image.tag`                | Image tag. Possible values listed [here](https://hub.docker.com/r/jellyfin/jellyfin/tags/).| `latest`|
 | `image.pullPolicy`         | Image pull policy | `IfNotPresent` |
+| `enableDLNA`		  | Enable DLNA for jellyfin | `false` |
 | `Service.type`          | Kubernetes service type for the jellyfin GUI | `ClusterIP` |
 | `Service.port`          | Kubernetes port where the jellyfin GUI is exposed| `8096` |
 | `Service.annotations`   | Service annotations for the jellyfin GUI | `{}` |
