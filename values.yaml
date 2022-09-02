@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: jellyfin/jellyfin
+  repository: docker.io/jellyfin/jellyfin
   tag: latest
   pullPolicy: IfNotPresent
 
