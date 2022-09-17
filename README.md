@@ -35,13 +35,14 @@ The command removes all the Kubernetes components associated with the chart and 
 
 ## Configuration
 
-The following tables lists the configurable parameters of the Sentry chart and their default values.
+The following tables lists the configurable parameters of the Jellyfin chart and their default values.
 
 | Parameter                  | Description                         | Default                                                 |
 |----------------------------|-------------------------------------|---------------------------------------------------------|
-| `image.repository`         | Image repository | `jellyfin/jellyfin` |
+| `image.repository`         | Image repository | `docker.io/jellyfin/jellyfin` |
 | `image.tag`                | Image tag. Possible values listed [here](https://hub.docker.com/r/jellyfin/jellyfin/tags/).| `latest`|
 | `image.pullPolicy`         | Image pull policy | `IfNotPresent` |
+| `enableDLNA`		  | Enable DLNA for jellyfin | `false` |
 | `Service.type`          | Kubernetes service type for the jellyfin GUI | `ClusterIP` |
 | `Service.port`          | Kubernetes port where the jellyfin GUI is exposed| `8096` |
 | `Service.annotations`   | Service annotations for the jellyfin GUI | `{}` |

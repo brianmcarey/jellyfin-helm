@@ -21,6 +21,9 @@ spec:
         app.kubernetes.io/name: {{ include "jellyfin.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+    {{- if .Values.enableDLNA }}
+      hostNetwork: true
+    {{- end }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -29,6 +32,12 @@ spec:
             - name: http
               containerPort: 8096
               protocol: TCP
+          {{ if .Values.enableDLNA }}
+            - name: dlna
+              containerPort: 1900
+              hostPort: 1900
+              protocol: UDP
+          {{- end }}
           livenessProbe:
             tcpSocket:
               port: http
