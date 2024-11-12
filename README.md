@@ -1,4 +1,8 @@
-# Jellyfin Software Media System
+# Archived 2024-11-12
+
+The repository has been archived. 
+
+See the helm chart provided by the Jellyfin project - https://github.com/jellyfin/jellyfin-helm
 
 This is a helm chart for [Jellyfin](https://github.com/jellyfin/jellyfin/)
 
